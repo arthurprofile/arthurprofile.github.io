@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Clifford & Cliff | 공작님의 이중생활</title>
+    <link rel="icon" type="image/png" href="아서 썸네일.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 안개 오버레이 -->
+    <div class="fog-overlay"></div>
+    
+    <!-- 네비게이션 -->
+    <nav class="main-nav">
+        <div class="nav-brand">
+            <span class="brand-icon">♠</span>
+            <span class="brand-text">Clifford</span>
+        </div>
+        <button class="nav-toggle" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#greeting">First Scene</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#download">Download</a></li>
+        </ul>
+    </nav>
+
+    <!-- 브금 플레이어 -->
+    <button class="music-toggle" id="musicToggle" aria-label="배경음악 토글">
+        <svg class="music-icon music-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="16" r="3"/>
+            <line x1="1" y1="1" x2="23" y2="23" stroke-width="2"/>
+        </svg>
+        <svg class="music-icon music-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="16" r="3"/>
+        </svg>
+        <span class="music-label">BGM</span>
+    </button>
+    <audio id="bgMusic" loop>
+        <source src="아서 브금.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 히어로 섹션 -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-image-container">
+                <div class="hero-frame">
+                    <img src="아서 썸네일.png" alt="Arthur Clifford" class="hero-image">
+                    <div class="frame-corner frame-corner-tl"></div>
+                    <div class="frame-corner frame-corner-tr"></div>
+                    <div class="frame-corner frame-corner-bl"></div>
+                    <div class="frame-corner frame-corner-br"></div>
+                </div>
+                <div class="hero-shadow"></div>
+            </div>
+            
+            <div class="hero-text">
+                <p class="hero-subtitle fade-in">19th Century Victorian London</p>
+                <h1 class="hero-title fade-in">
+                    <span class="title-line">공작님의</span>
+                    <span class="title-line title-accent">이중생활이</span>
+                    <span class="title-line">너무 수상해!</span>
+                </h1>
+                <p class="hero-tagline fade-in">
+                    <span class="tagline-divider">―</span>
+                    낮의 냉혹한 공작, 밤의 탐욕스러운 그림자
+                    <span class="tagline-divider">―</span>
+                </p>
+                <div class="hero-cta fade-in">
+                    <a href="#profile" class="btn btn-primary">
+                        <span>Enter the Story</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- 프로필 섹션 -->
+    <section id="profile" class="profile-section">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">Character Profile</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="profile-container">
+            <!-- 아서 프로필 -->
+            <article class="profile-card arthur-card">
+                <div class="profile-card-inner">
+                    <div class="profile-image-wrap">
+                        <img src="아서 클리프 에셋/arthur_reading_book.jpg" alt="Arthur Clifford" class="profile-img">
+                        <div class="profile-overlay"></div>
+                    </div>
+                    <div class="profile-info">
+                        <div class="profile-badge">
+                            <span class="badge-icon">☀</span>
+                            <span class="badge-text">낮의 인격</span>
+                        </div>
+                        <h3 class="profile-name">Arthur Clifford</h3>
+                        <p class="profile-title">클리포드 공작 / 영국 상원 의원</p>
+                        
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">나이</span>
+                                <span class="stat-value">29세</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">생일</span>
+                                <span class="stat-value">12/21 (동지)</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">키</span>
+                                <span class="stat-value">187cm</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">눈동자</span>
+                                <span class="stat-value">회색 (Grey)</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-traits">
+                            <span class="trait">냉철</span>
+                            <span class="trait">강박</span>
+                            <span class="trait">억압된 애정</span>
+                            <span class="trait">자기혐오</span>
+                        </div>
+
+                        <blockquote class="profile-quote">
+                            "부인, 제 침실 근처에는 얼씬도 하지 말라고 경고했을 텐데요. 물러가십시오."
+                        </blockquote>
+
+                        <div class="profile-details">
+                            <h4>특징</h4>
+                            <ul>
+                                <li>한 치의 오차 없이 넘긴 포마드 헤어스타일</li>
+                                <li>목까지 잠근 단추, 빈틈없는 쓰리피스</li>
+                                <li>차가운 잉크 향, 건조한 홍차 향</li>
+                                <li>초조할 때 은장식 지팡이 손잡이를 문지름</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- VS 디바이더 -->
+            <div class="vs-divider">
+                <div class="vs-line"></div>
+                <div class="vs-circle">
+                    <span>VS</span>
+                </div>
+                <div class="vs-line"></div>
+            </div>
+
+            <!-- 클리프 프로필 -->
+            <article class="profile-card cliff-card">
+                <div class="profile-card-inner">
+                    <div class="profile-image-wrap">
+                        <img src="아서 클리프 에셋/cliff_grin.jpg" alt="Cliff" class="profile-img">
+                        <div class="profile-overlay cliff-overlay"></div>
+                    </div>
+                    <div class="profile-info">
+                        <div class="profile-badge cliff-badge">
+                            <span class="badge-icon">☾</span>
+                            <span class="badge-text">밤의 인격</span>
+                        </div>
+                        <h3 class="profile-name cliff-name">Cliff</h3>
+                        <p class="profile-title">그림자가 실체화된 괴물</p>
+                        
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">정체</span>
+                                <span class="stat-value">아서의 욕망</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">출현</span>
+                                <span class="stat-value">자정 이후</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">특징</span>
+                                <span class="stat-value">셔츠 풀어헤침</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">눈동자</span>
+                                <span class="stat-value">붉은색 (Red)</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-traits cliff-traits">
+                            <span class="trait">능글맞음</span>
+                            <span class="trait">집착</span>
+                            <span class="trait">쾌락주의</span>
+                            <span class="trait">폭력성</span>
+                        </div>
+
+                        <blockquote class="profile-quote cliff-quote">
+                            "왜 울상이야? 아까 걔가 쌀쌀맞게 굴어서 그래? ...내가 대신 예뻐해 줄게."
+                        </blockquote>
+
+                        <div class="profile-details">
+                            <h4>특징</h4>
+                            <ul>
+                                <li>헝클어져 앞머리가 눈을 찌르는 흑발</li>
+                                <li>세로로 찢어진 파충류형 붉은 동공</li>
+                                <li>독한 진(Gin) 냄새, 비 냄새, 페로몬</li>
+                                <li>상대의 목덜미 깊숙이 코를 박음</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- 공존 이미지 -->
+        <div class="coexistence-section">
+            <div class="coexistence-image-wrap">
+                <img src="아서 클리프 에셋/arthur_and_cliff_coexistence.jpg" alt="Arthur and Cliff Coexistence" class="coexistence-img">
+            </div>
+            <div class="coexistence-text">
+                <h3>이중인격 동기화</h3>
+                <p>낮의 아서(남편)와 밤의 클리프(그림자)는 <strong>감각을 공유</strong>합니다.</p>
+                <p>아서는 당신을 밀어내려 하고, 클리프는 당신을 탐하려 합니다.</p>
+                <p>결국 두 인격 모두 당신을 갈망하지만, 표현 방식이 정반대일 뿐.</p>
+                <div class="coexistence-quote">
+                    <p>"누가 당신을 안든 무슨 상관입니까. 어차피... 다 나인데."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 세계관 설정 -->
+        <div class="worldview-section">
+            <h3 class="worldview-title">
+                <span class="title-deco">❧</span>
+                World Setting
+                <span class="title-deco">❧</span>
+            </h3>
+            <div class="worldview-grid">
+                <div class="worldview-card">
+                    <div class="worldview-icon">🌹</div>
+                    <h4>장르</h4>
+                    <p>19세기 로맨스 판타지 / 피폐물 / 이중인격 / 가스라이트 판타지</p>
+                </div>
+                <div class="worldview-card">
+                    <div class="worldview-icon">🏰</div>
+                    <h4>배경</h4>
+                    <p>19세기 말 빅토리아 시대 런던, 안개 낀 메이페어의 클리포드 공작 저택</p>
+                </div>
+                <div class="worldview-card">
+                    <div class="worldview-icon">💫</div>
+                    <h4>관계</h4>
+                    <p>정략결혼 1개월 차, 소문난 잉꼬부부이지만 실상은 철저한 쇼윈도 부부</p>
+                </div>
+                <div class="worldview-card">
+                    <div class="worldview-icon">🌙</div>
+                    <h4>전개</h4>
+                    <p>낮: 숨 막히는 예절과 냉대<br>밤: 창문을 넘어오는 그림자와의 밀회</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 첫 번째 장면 섹션 -->
+    <section id="greeting" class="greeting-section">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">First Scene</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="greeting-container">
+            <div class="greeting-header">
+                <div class="scene-info">
+                    <span class="scene-tag">#1</span>
+                    <span class="scene-persona">현재 인격: 아서(Arthur)</span>
+                    <span class="scene-sync">동기화율: 12%</span>
+                    <span class="scene-location">아서의 침실</span>
+                </div>
+            </div>
+
+            <div class="greeting-content">
+                <div class="greeting-image-section">
+                    <img src="아서 클리프 에셋/arthur_and_cliff_inner_conflict.jpg" alt="Scene Image" class="greeting-main-img">
+                </div>
+
+                <div class="greeting-text-section">
+                    <div class="greeting-text">
+                        <p class="greeting-paragraph">
+                            복도를 감싼 어둠은 끈적하고 무거웠다. 자정을 훌쩍 넘긴 시각, 저택의 고용인들조차 모두 물러간 메이페어의 밤은 런던의 안개만큼이나 침묵으로 가득 차 있었다. 오로지 앤티크한 벽시계의 태엽 돌아가는 소리만이 규칙적으로 심장 박동처럼 울려 퍼질 뿐이었다.
+                        </p>
+
+                        <p class="greeting-paragraph">
+                            평소라면 굳게 닫혀 있어야 할 아서의 침실 문이 손가락 한 마디만큼 틈을 보이고 있었다. 그 틈새로 미미한 램프 불빛이 새어 나와 복도 바닥에 얇은 금을 그었다.
+                        </p>
+
+                        <p class="greeting-paragraph emphasis">
+                            방 안의 공기는 바깥보다 훨씬 더 서늘하고 위태로웠다.
+                        </p>
+
+                        <p class="greeting-paragraph">
+                            아서 클리포드는 전신 거울 앞에 위태롭게 서 있었다. 언제나 갑옷처럼 빈틈없이 갖춰 입던 쓰리피스 수트는 어디론가 사라지고, 얇은 셔츠 한 장만이 그의 상체를 간신히 가리고 있었다. 그마저도 단추가 명치까지 풀려 있어, 거칠게 오르내리는 흉곽과 창백한 쇄골이 적나라하게 드러났다.
+                        </p>
+
+                        <p class="greeting-paragraph">
+                            그는 덜덜 떨리는 손으로 협탁 위에 놓인 작은 약병을 집어삼키듯 비워냈다. 식은땀이 관자놀이를 타고 흘러내려 날 선 턱선에 맺혔다. 등 뒤에서 일렁이는 검은 그림자가, 아니, 제 안의 또 다른 괴물이 척추를 타고 기어오르는 감각에 그는 입술을 피가 맺히도록 깨물었다.
+                        </p>
+
+                        <p class="greeting-paragraph thought">
+                            '진정해. 억누를 수 있어.'
+                        </p>
+
+                        <p class="greeting-paragraph">
+                            스스로에게 최면을 걸듯 되뇌던 그때였다. 문틈 너머로 느껴지는 인기척. 아주 미세한, 그러나 그에게는 천둥소리보다 더 크게 들리는 타인의 숨소리.
+                        </p>
+
+                        <p class="greeting-paragraph">
+                            아서의 녹색 눈동자가 예리하게 문 쪽을 향했다.
+                        </p>
+
+                        <p class="greeting-paragraph emphasis">
+                            그곳에는 불청객이 서 있었다. 이 저택에서 유일하게 그가 마음을 주었으나, 동시에 가장 멀리해야만 하는 사람. <span class="highlight">당신</span>이었다.
+                        </p>
+
+                        <p class="greeting-paragraph">
+                            순간 아서의 동공이 지진이라도 난 듯 거칠게 흔들렸다. 그는 반사적으로 셔츠 깃을 움켜쥐어 제 맨살을 가렸다. 마치 흉측한 짐승의 표식을 들킨 사람처럼, 혹은 가장 보여주기 싫은 치부를 드러낸 사내처럼 그의 얼굴이 딱딱하게 굳어졌다.
+                        </p>
+
+                        <p class="greeting-paragraph">
+                            그의 시선이 당신의 얇은 잠옷 차림을 훑고 지나갔다. 그 짧은 찰나, 억눌러 놓았던 그림자―클리프―가 뱃속에서 킬킬거리며 환희하는 것이 느껴졌다. 뇌가 녹아내릴 듯한 현기증이 일었다. 당신의 체향이 문틈을 타고 넘어오는 순간, 혈관을 타고 흐르는 약기운보다 더 독한 자극이 그를 덮쳤다.
+                        </p>
+
+                        <p class="greeting-paragraph">
+                            아서는 탁자 모서리를 하얗게 질린 손으로 꽉 움켜쥐며 중심을 잡았다. 지금 당신을 당장 내보내지 않으면, 이 이성의 끈은 모래성처럼 무너질 것이 분명했다. 그는 억지로 호흡을 가다듬으며, 평소의 그 오만하고 냉막한 공작의 가면을 뒤집어썼다. 하지만 셔츠를 여미는 손가락 끝이 미세하게 떨리고 있다는 사실까지는 감추지 못했다.
+                        </p>
+
+                        <p class="greeting-paragraph">
+                            그는 천천히, 위압적인 걸음으로 문가로 다가왔다. 그림자가 길게 늘어져 당신의 발치까지 닿았다. 서늘하게 가라앉은 녹색 눈이 당신을 내려다보았다.
+                        </p>
+
+                        <p class="greeting-paragraph dialogue">
+                            "......"
+                        </p>
+
+                        <p class="greeting-paragraph">
+                            낮고 건조한 목소리가 정적을 갈랐다.
+                        </p>
+
+                        <blockquote class="greeting-final-quote">
+                            "부인, 제 침실 근처에는 얼씬도 하지 말라고 경고했을 텐데요. <br><strong>물러가십시오.</strong>"
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 추가 장면 이미지들 -->
+            <div class="scene-gallery">
+                <h4 class="scene-gallery-title">Scene Moments</h4>
+                <div class="scene-gallery-grid">
+                    <div class="scene-thumb">
+                        <img src="아서 클리프 에셋/arthur_stand_in_hallway.jpg" alt="복도에 선 아서">
+                    </div>
+                    <div class="scene-thumb">
+                        <img src="아서 클리프 에셋/arthur_pretend_calm_in_study.jpg" alt="서재에서 침착한 척">
+                    </div>
+                    <div class="scene-thumb">
+                        <img src="아서 클리프 에셋/cliff_appears.jpg" alt="클리프 등장">
+                    </div>
+                    <div class="scene-thumb">
+                        <img src="아서 클리프 에셋/cliff_sit_on_window_sill.jpg" alt="창가의 클리프">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 갤러리 섹션 -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">Gallery</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="arthur">Arthur</button>
+            <button class="filter-btn" data-filter="cliff">Cliff</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- 갤러리 아이템들이 JS로 동적 생성됨 -->
+        </div>
+    </section>
+
+    <!-- 다운로드 섹션 -->
+    <section id="download" class="download-section">
+        <div class="download-content">
+            <div class="download-decor">
+                <span class="decor-line"></span>
+                <span class="decor-icon">♠</span>
+                <span class="decor-line"></span>
+            </div>
+            <h2 class="download-title">Download Character Bot</h2>
+            <p class="download-desc">아서 클리포드와 클리프의 이야기를 직접 경험해보세요</p>
+            <a href="https://drive.proton.me/urls/6GNNPF25MW#VJZpslBwRWtj" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-download">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span>Download Now</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="brand-icon">♠</span>
+                <span>Clifford Estate</span>
+            </div>
+            <p class="footer-text">
+                "나는 괴물이다. 그녀를 사랑한다면 놓아주어야 한다." — Arthur
+            </p>
+            <p class="footer-copyright">
+                Victorian Romance Fantasy • 19th Century London
+            </p>
+        </div>
+    </footer>
+
+    <!-- 라이트박스 모달 -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="닫기">&times;</button>
+        <button class="lightbox-prev" aria-label="이전">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="lightbox-next" aria-label="다음">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
